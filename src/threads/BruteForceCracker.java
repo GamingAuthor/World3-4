@@ -16,13 +16,34 @@ public class BruteForceCracker {
 	static float elapsedTime;
 	
 	public static void main(String[] args) {
+		int ctr = 0;
+		Long.toString(code);
+		code+=4;
+		System.out.println(code);
+		Thread brute = new Thread(()->{
+			for(int i = 0; i <= 9; i++) {
+				
+			}
+			});
+		Thread force = new Thread(()->{
+			for(int i = 0; i <= 9; i++) {
+
+			}
+			});
+		Thread cracker = new Thread(()->{
+			for(int i = 0; i <= 9; i++) {
+
+			}
+			});
 		System.out.println("Starting Brute Force Checker");
 		System.out.println(code);
 		startTime = System.currentTimeMillis();
-		
-		int ctr = 0;
-		while(!checkCode(ctr++));
-		
+		while(!checkCode(ctr)) {
+			for(int i = 0; i <=code; i++) {
+				ctr=i;
+			}
+			System.out.println(checkCode(ctr));
+		}
 		endTime = System.currentTimeMillis();
 		elapsedTime = (float)(endTime - startTime);
 		elapsedTime /= 1000.f;
@@ -34,6 +55,13 @@ public class BruteForceCracker {
 			return true;
 		}else{
 			return false;
+		}
+	}
+	public static void variable(long ree) {
+		if(ree == code) {
+			
+		} else {
+		ree++; 
 		}
 	}
 }
